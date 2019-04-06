@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .models import Result, Profile, Keyword
+
+def result_list(request):
+    results = Result.objects.all()
+    return render(request, 'result_list.html', {'results': results})

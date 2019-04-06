@@ -1,5 +1,5 @@
 body {
-    font-family: 'Helvetica Neue', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     max-width: 50em;
     margin: auto;
     padding: 2em 1em;
@@ -12,6 +12,11 @@ nav a {
     background-color: #eeeeee;
 }
 
+.appname {
+    background: grey;
+    padding: 1em;
+}
+
 nav a:hover {
     background-color: orange;
     color: blue;
@@ -20,7 +25,7 @@ nav a:hover {
 a,
 a:visited {
     text-decoration: none;
-    color: blue;
+    color: white;
 }
 
 a:hover {

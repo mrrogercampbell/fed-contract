@@ -1,6 +1,15 @@
 from django.db import models
 
 # Create your models here.
+J_AND_A_AUTHORITY = (
+    ('FAR 6.302-1(c) - Brand name', 'FAR 6.302-1(c) - Brand name')
+)
+JUSTIFICATION_AUTH = (
+    ('Urgency', 'Urgency'),
+    ('Minimum Guarantee', 'Minimum Guarantee'),
+    ('Other Statutory Authority', 'Other Statutory Authority')
+)
+
 
 class Result(models.Model):
     title = models.CharField(max_length=200)
@@ -51,10 +60,10 @@ class Profile(models.Model):
         max_length=30, choices= < NAME_OF_CHOICE_LIST > )
 
     j_and_a_statutory_authority = models.CharField(
-        max_length=30, choices= < NAME_OF_CHOICE_LIST > )
+        max_length=30, choices= < J_AND_A_AUTHORITY > )
 
     fair_opportunity_limited_source_justification_authority = models.CharField(
-        max_length=30, choices= < NAME_OF_CHOICE_LIST > )
+        max_length=30, choices=JUSTIFICATION_AUTH)
 
     posted_date_range = models.DateField(null=True)
 

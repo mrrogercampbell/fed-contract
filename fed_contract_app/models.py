@@ -16,6 +16,23 @@ class Result(models.Model):
     def __str__(self):
         return self.title
 
+PERF_STATE_CHOICES = (
+    ('Alabama', 'Alabama'),
+    ('Alaska', 'Alaska'),
+    ('Arizona', 'Arizona')
+)
+
+DOCS_SEARCH_CHOICES = (
+    ('Competitive 8(a)', 'Competitive 8(a)'),
+    ('Partial HBCU / MI', 'Partial HBCU / MI'),
+    ('Partial Small Business', 'Partial Small Business')
+)
+
+ASIDE_CHOICES = (
+    ('Active Documents', 'Active Documents'),
+    ('Archived Documents', 'Archived Documents'),
+    ('Both', 'Both')
+)
 
 class Profile(models.Model):
     company_name = models.CharField(max_length=100)
@@ -23,32 +40,32 @@ class Profile(models.Model):
     posted_date = models.DateField(null=True)
 
     place_of_performance_state = models.CharField(
-        max_length=30, choices= < NAME_OF_CHOICE_LIST >)
+        max_length=30, choices=PERF_STATE_CHOICES)
 
     place_of_performance_zip_code = models.IntegerField()
 
     documents_to_search = models.CharField(
-        max_length=30, choices= < NAME_OF_CHOICE_LIST > )
+        max_length=30, choices= DOCS_SEARCH_CHOICES )
 
     set_aside_code = models.CharField(
-        max_length=30, choices= < NAME_OF_CHOICE_LIST > )
+        max_length=30, choices= ASIDE_CHOICES )
 
-    opportunity_procurement_type = models.CharField(
-        max_length=30, choices= < NAME_OF_CHOICE_LIST > )
+    # opportunity_procurement_type = models.CharField(
+    #     max_length=30, choices= < NAME_OF_CHOICE_LIST > )
 
-    agency_office_location = models.CharField(
-        max_length=30, choices= < NAME_OF_CHOICE_LIST > )
+    # agency_office_location = models.CharField(
+    #     max_length=30, choices= < NAME_OF_CHOICE_LIST > )
 
-    recovery_and_reinvestment_act_action = models.CharField(
-        max_length=30, choices= < NAME_OF_CHOICE_LIST > )
+    # recovery_and_reinvestment_act_action = models.CharField(
+    #     max_length=30, choices= < NAME_OF_CHOICE_LIST > )
 
-    keywords_or_sol = models.CharField(max_length=100)
+    # keywords_or_sol = models.CharField(max_length=100)
 
-    naics_code = models.CharField(
-        max_length=30, choices= < NAME_OF_CHOICE_LIST > )
+    # naics_code = models.CharField(
+    #     max_length=30, choices= < NAME_OF_CHOICE_LIST > )
 
-    classification_code = models.CharField(
-        max_length=30, choices= < NAME_OF_CHOICE_LIST > )
+    # classification_code = models.CharField(
+    #     max_length=30, choices= < NAME_OF_CHOICE_LIST > )
 
     j_and_a_statutory_authority = models.CharField(
         max_length=30, choices= < NAME_OF_CHOICE_LIST > )

@@ -50,6 +50,9 @@ class Profile(models.Model):
         max_length=30, choices= < NAME_OF_CHOICE_LIST > )
 
     posted_date_range = models.DateField(null=True)
+
     response_deadline = models.DateField(null=True)
+
     last_modified = models.DateField(null=True)
+
     contract_award_date = models.DateField(null=True)

@@ -2,8 +2,10 @@ from django.db import models
 
 # Create your models here.
 J_AND_A_AUTHORITY = (
-    ('FAR 6.302-1(c) - Brand name', 'FAR 6.302-1(c) - Brand name')
-)
+    ('FAR_63021c_Brand_name', 'FAR 6.302-1(c) - Brand name',
+    ('FAR_63022_Unusual_compelling', 'FAR 6.302-2 - Unusual and compelling' )
+    )
+
 JUSTIFICATION_AUTH = (
     ('Urgency', 'Urgency'),
     ('Minimum Guarantee', 'Minimum Guarantee'),
@@ -93,7 +95,7 @@ class Profile(models.Model):
     contract_award_date = models.DateField(null=True)
 
     def __str__(self):
-    return self.company_name
+        return self.company_name
 
 
 class Keyword(models.Model):
@@ -105,4 +107,4 @@ class Keyword(models.Model):
     keyword6 = models.CharField(max_length=200)
 
     def __str__(self):
-    return self.title
+        return self.title

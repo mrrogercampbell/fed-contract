@@ -25,6 +25,7 @@ class Result(models.Model):
     def __str__(self):
         return self.title
 
+
 PERF_STATE_CHOICES = (
     ('Alabama', 'Alabama'),
     ('Alaska', 'Alaska'),
@@ -43,6 +44,7 @@ ASIDE_CHOICES = (
     ('Both', 'Both')
 )
 
+
 class Profile(models.Model):
     company_name = models.CharField(max_length=100)
 
@@ -54,10 +56,10 @@ class Profile(models.Model):
     place_of_performance_zip_code = models.IntegerField()
 
     documents_to_search = models.CharField(
-        max_length=30, choices= DOCS_SEARCH_CHOICES )
+        max_length=30, choices=DOCS_SEARCH_CHOICES)
 
     set_aside_code = models.CharField(
-        max_length=30, choices= ASIDE_CHOICES )
+        max_length=30, choices=ASIDE_CHOICES)
 
     # opportunity_procurement_type = models.CharField(
     #     max_length=30, choices= < NAME_OF_CHOICE_LIST > )
@@ -77,7 +79,7 @@ class Profile(models.Model):
     #     max_length=30, choices= < NAME_OF_CHOICE_LIST > )
 
     j_and_a_statutory_authority = models.CharField(
-        max_length=30, choices= < J_AND_A_AUTHORITY > )
+        max_length=30, choices=J_AND_A_AUTHORITY)
 
     fair_opportunity_limited_source_justification_authority = models.CharField(
         max_length=30, choices=JUSTIFICATION_AUTH)

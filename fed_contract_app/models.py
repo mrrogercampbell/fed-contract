@@ -2,9 +2,9 @@ from django.db import models
 
 # Create your models here.
 J_AND_A_AUTHORITY = (
-    ('FAR_63021c_Brand_name', 'FAR 6.302-1(c) - Brand name',
-    ('FAR_63022_Unusual_compelling', 'FAR 6.302-2 - Unusual and compelling' )
-    )
+    ('FAR_63021c_Brand_name', 'FAR 6.302-1(c) - Brand name'),
+    ('FAR_63022_Unusual_compelling', 'FAR 6.302-2 - Unusual and compelling')
+),
 
 JUSTIFICATION_AUTH = (
     ('Urgency', 'Urgency'),

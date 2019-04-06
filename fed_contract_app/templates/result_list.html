@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Results <a href="">(+)</a></h2>
+<h2>Results</h2>
 <ul>
     {% for result in results %}
         <li>
-            <a href="">{{ result.title }}</a>
+            <p>Contract Title: <a href="">{{ result.title }}</a></p>
+            <p>NAICS Num: {{ result.naics }}</p>
+            <p>Headers: {{ result.headers }}</p>
         </li>
     {% endfor %}
 </ul>

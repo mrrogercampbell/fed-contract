@@ -4,7 +4,7 @@ from django.db import models
 J_AND_A_AUTHORITY = (
     ('FAR_63021c_Brand_name', 'FAR 6.302-1(c) - Brand name'),
     ('FAR_63022_Unusual_compelling', 'FAR 6.302-2 - Unusual and compelling')
-),
+)
 
 JUSTIFICATION_AUTH = (
     ('Urgency', 'Urgency'),
@@ -107,4 +107,4 @@ class Keyword(models.Model):
     keyword6 = models.CharField(max_length=200)
 
     def __str__(self):
-        return self.title
+        return self.keyword1

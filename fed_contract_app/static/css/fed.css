@@ -5,11 +5,15 @@ body {
     padding: 2em 1em;
 }
 
-nav a {
+/* nav a {
     border: 1px solid black;
     margin: .5em;
     padding: .5em;
     background-color: #eeeeee;
+} */
+
+.mb-0 {
+    text-decoration: none;
 }
 
 .appname {
@@ -17,10 +21,10 @@ nav a {
     padding: 1em;
 }
 
-nav a:hover {
+/* nav a:hover {
     background-color: orange;
     color: blue;
-}
+} */
 
 a,
 a:visited {

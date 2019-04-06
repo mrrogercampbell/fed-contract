@@ -4,9 +4,10 @@
 <h2>Results <a href="">(+)</a></h2>
 <ul>
     {% for result in results %}
-        <li>
-            <a href="">{{ result.title }}</a>
-        </li>
+    <li>
+        <a href="{% url 'result_detail' pk=result.id %}">Contract Title: {{ result.title }}</a>
+        <p>NAICS Number: {{result.naics}}</p>
+    </li>
     {% endfor %}
 </ul>
 {% endblock %}
